@@ -4,7 +4,7 @@ This is my second javascript project. This project further strengthened my basic
 
 Hope you all enjoy it!
 
-[Etch a Sketch Project](https://lavanyagarg112.github.io/etch-a-sketch/)https://lavanyagarg112.github.io/etch-a-sketch/
+[Etch a Sketch Project](https://lavanyagarg112.github.io/etch-a-sketch/)
 
 Future scope:
 More functionalities
