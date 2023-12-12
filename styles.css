@@ -1,6 +1,8 @@
-.body {
+body {
     display: flex;
     flex-direction: column;
+    background-color: black;
+    color: white;
 }
 
 .header {
@@ -14,5 +16,24 @@
 
 .grids {
     border: 2px solid black;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    justify-content: center;
+
+}
+
+button {
+
+    background-color: aquamarine;
+    border-radius: 8px;
+
 }
 

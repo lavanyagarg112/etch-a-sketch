@@ -1,11 +1,11 @@
 const container = document.querySelector(".grids");
 
-for (let i = 0; i < 16; i++){
+for (let i = 0; i < 30; i++){
     const row = document.createElement('div');
-    for (let j = 0; j < 16; j++){
+    for (let j = 0; j < 30; j++){
         const col = document.createElement('div');
         row.appendChild(col);
-        col.style.cssText = 'height: 20px; width: 20px;';
+        col.style.cssText = 'height: 20px; width: 20px; background: white;';
         col.setAttribute('class', 'box'); 
         
     }
@@ -17,13 +17,24 @@ const boxes = document.querySelectorAll(".box");
 const clear = document.querySelector("#clear");
 const erase = document.querySelector('#eraser');
 const draw = document.querySelector('#draw');
+const color = document.querySelector('#colour');
 
 function boxClicked(){
 
     if (isErase && isMouseDown) {
         this.style.cssText = 'background: white; height: 20px; width: 20px;'
     } else if (isMouseDown){
-        this.style.cssText = "background: pink; height: 20px; width: 20px;";
+        if (randomcolor){
+
+            const allcolors = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
+            const choose = Math.floor((Math.random()*7));
+            const bgcolor = allcolors[choose];
+
+            this.style.cssText = `background: ${bgcolor}; height: 20px; width: 20px;`;
+        } else {
+            this.style.cssText = "background: black; height: 20px; width: 20px;";
+        }
+        
     }
     
 }   
@@ -55,7 +66,7 @@ boxes.forEach(box => {
 
 clear.addEventListener('click', gridCleared);
 let isErase = false;
-
+let randomcolor = false;
 
 erase.addEventListener('click', () => {
     isErase = true;
@@ -63,8 +74,13 @@ erase.addEventListener('click', () => {
 
 draw.addEventListener('click', () => {
     isErase = false;
+    randomcolor = false;
 });
 
+color.addEventListener('click', () => {
+    isErase = false;
+    randomcolor = true;
+});
 
 
 
