@@ -4,7 +4,7 @@ This is my second javascript project. This project further strengthened my basic
 
 Hope you all enjoy it!
 
-https://lavanyagarg112.github.io/rock-paper-scissors/
+[https://lavanyagarg112.github.io/rock-paper-scissors/](https://lavanyagarg112.github.io/etch-a-sketch/)https://lavanyagarg112.github.io/etch-a-sketch/
 
 Future scope:
 More functionalities
